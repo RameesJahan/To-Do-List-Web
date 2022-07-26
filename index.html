@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        
+        
+        <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+    </head>
+    <body>
+       <div class="loader" id="loader"><div class="l-body"> </div> </div>
+       <div class="container">
+            <div class="content">
+                <div class="card main-form">
+                    <div class="main-form-body">
+                        <div class="heading-container">
+                           <h1 class="heading-main">To Do List</h1>
+                        </div>
+                        
+                        <input type="text" name="add-item-ipt" id="add-item-ipt" value="" />
+                        <input type="button" name="add-item-btn" id="add-item-btn" value="Add" />
+                    </div>
+                </div>
+                <div class="row">
+                  <div class="colomn">
+                    <div class="card list-view">
+                        <p class="tasks">Tasks</p>
+                        <div class="main-list-body">
+                           <ul id="main-list" class="main-list">
+                               <!-- List data from storage-->
+                           </ul>
+                        </div>
+                    </div>
+                  </div>
+                  
+                  <div class="colomn">
+                    <div class="card list-view">
+                        <p class="tasks">Completed</p>
+                        <div class="comp-list-body">
+                           <ul id="comp-list" class="comp-list">
+                               <!-- List data from storage-->
+                           </ul>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            
+           
+       </div>
+            
+       <script src="script.js" type="text/javascript" charset="utf-8"></script>
+    </body>
+</html>

@@ -1,0 +1,281 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: LondonTube;
+}
+body {
+  justify-content: center;
+  align-items: center;
+}
+.heading-container{
+  position: relative;
+  display: flex;
+  background: none;
+  width: 100%;
+  height: 3em;
+  margin-bottom: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.heading-main{
+  position: absolute;
+  padding: .5rem;
+  color: #000000;
+  background: #ffffff;
+  width: auto;
+  font-family: Acetone;
+  border-radius: 5px;
+}
+
+
+
+/* Pre Loader*/
+
+.loader{
+  position: fixed;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background: white;
+  align-items: center;
+  justify-content:center ;
+  transition: 0.5s;
+  z-index: 100;
+}
+.l-body{
+  content: '';
+  position: relative;
+  display: flex;
+  background: transparent;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 5px dashed #FBAB7E;
+  align-items: center;
+  justify-content:center ;
+  animation: rotater ease-in-out 4s infinite;
+}
+.l-body::after{
+  content: '';
+  background: transparent;
+  position: relative;
+  display: block;
+  width: 45px;
+  height: 45px;
+  border: 5px dashed #F7CE68;
+  border-radius: 50%;
+  animation: rotater ease-in-out 2s infinite;
+  animation-direction: reverse;
+}
+.hide{
+  opacity: 0;
+  visibility: hidden;
+  
+}
+
+@keyframes rotater{
+  0% {
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+  
+}
+
+/*main body*/
+
+.container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  padding: 5%;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  overflow-y: scroll;
+}
+.content {
+  position: relative;
+  background: none;
+  width: 100%;
+}
+.card {
+  position: relative;
+  background-color: #FBAB7E;
+  background-image: -webkit-linear-gradient(332deg, #FBAB7E 0%, #F7CE68 100%);
+  background-image: -moz-linear-gradient(332deg, #FBAB7E 0%, #F7CE68 100%);
+  background-image: -o-linear-gradient(332deg, #FBAB7E 0%, #F7CE68 100%);
+  background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+  padding: 0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: rgba(149,157,165,0.57) 0px 8px 24px;
+
+}
+.main-form {
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.main-form-body {
+  text-align: center;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+#add-item-ipt {
+  background: rgb(255,255,255);
+  width: 90%;
+  margin: 10px 0;
+  padding: 10px;
+  font-family: Sans-Serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(0,0,0);
+  border: none;
+  border-radius: 5px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.list-view {
+  margin: 15px 0;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  transition: .7s;
+}
+#add-item-btn {
+  background: #ffffff;
+  border: none;
+  margin: 10px 0;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #F7CE68;
+  border-radius: 5px;
+  opacity: .75;
+  transition-duration: 0.4s;
+}
+#add-item-btn.active{
+  opacity: 1;
+}
+
+.tasks{
+  color:#ffffff;
+  margin: 5px;
+  text-decoration: none;
+  margin-left: 0px;
+  margin-bottom: 0;
+  padding: 5px;
+  padding-bottom: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/*Tasks List*/
+.main-list-body {
+  padding: 0px;
+  position: relative;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  transition: .7s;
+}
+.main-list {
+  background: #ffffff;
+  border-radius: 5px;
+  padding: 5px;
+  list-style: none;
+}
+.main-list li {
+  display: flex;
+  color: black;
+  background: #ffffff;
+  padding: 5px;
+  transition: .7s;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.main-list li p {
+  margin: 0 10px;
+  width: 100%;
+}
+.delete-btn {
+  color: #ff0000;
+  font-size: 20px;
+  background: none;
+  display: block;
+  position: relative;
+  float: right;
+  border: none;
+}
+
+/* completed Tasks List*/
+.comp-list-body {
+  padding: 0px;
+  position: relative;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  transition: .7s;
+}
+.comp-list {
+  background: #ffffff;
+  border-radius: 5px;
+  padding: 5px;
+  list-style: none;
+}
+.comp-list li {
+  display: flex;
+  color: black;
+  background: #ffffff;
+  padding: 5px;
+  transition: .7s;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.comp-list li p {
+  margin: 0 10px;
+  width: 100%;
+}
+
+
+/*computer view*/
+
+
+
+@media screen and (min-width: 600px) {
+  
+  .row{
+    display: flex;
+    gap: 3%;
+  }
+  .colomn{
+    width:100%;
+  }
+ 
+}
+
+/*Custom Fonts*/
+
+@font-face {
+  font-family:LondonTube;
+  src: url(fonts/LondonTube-MABx.ttf);
+}
+
+@font-face {
+  font-family:Acetone;
+  src: url(fonts/Acetone-w1gn6.ttf);
+}
